@@ -1,0 +1,8 @@
+%div#signin-form
+  = form_for @credential, url:'signin' do |f|
+    %div.placeholding-input.api-key
+      = f.text_field :api_key, class:'text-input', placeholder:'API KEY', autocomplete:'on'
+    %div.placeholding-input.secret-key
+      = f.text_field :secret_key, class:'text-input', placeholder:'SECRET KEY', autocomplete:'on'
+    %p.submit
+      = f.submit 'SignIn', class:'submit btn btn-primary'

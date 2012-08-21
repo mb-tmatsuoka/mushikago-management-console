@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    @credential = params[:credential] ? Credential.new(params[:credential]) : Credential.new
   end
 
   def create
