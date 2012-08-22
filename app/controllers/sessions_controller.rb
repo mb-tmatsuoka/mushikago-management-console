@@ -7,12 +7,12 @@ class SessionsController < ApplicationController
   def create
     session[:api_key] = params[:credential][:api_key]
     session[:secret_key] = params[:credential][:secret_key]
-    redirect_to :projects, :notice => 'login success!'
+    redirect_to :projects
   end
 
   def destroy
     session[:api_key] = nil
     session[:secret_key] = nil
-    redirect_to :root, :notice => 'logout success!'
+    redirect_to :root, :notice => 'Good Bye!'
   end
 end

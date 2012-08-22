@@ -20,13 +20,12 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
           %a.brand(href="#") MitsubachiConsole
 
     .container
       .content
         .row
+          .span1.offset11
+            - if signed_in?
+              = link_to 'SignOut', controller:'sessions', action:'destroy'
           = yield

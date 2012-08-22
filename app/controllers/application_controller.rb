@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   end
 
   def handle_unauthorized_error
-    redirect_to :root, notice: 'Invalid API KEY or SECRET KEY'
+    redirect_to :root, alert: 'Invalid API KEY or SECRET KEY'
   end
 end
