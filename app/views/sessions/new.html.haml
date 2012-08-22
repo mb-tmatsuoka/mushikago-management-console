@@ -1,6 +1,7 @@
 .span4.offset4
   %div#signin-form
-    .alert= notice if notice
+    - if notice
+      .alert= notice
     = form_for @credential, url:'signin' do |f|
       %div.controls
         = f.text_field :api_key, class:'text-input', placeholder:'API KEY', autocomplete:'on', class:'span4'
