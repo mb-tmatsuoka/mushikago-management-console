@@ -4,5 +4,7 @@ MitsubachiConsole::Application.routes.draw do
 
   root :to => 'sessions#new'
 
-  match ':controller(/:action(/:id))(.:format)'
+  resources :projects
+
+#  match ':controller(/:action(/:id))(.:format)'
 end

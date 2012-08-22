@@ -1,8 +1,10 @@
-%div#signin-form
-  = form_for @credential, url:'signin' do |f|
-    %div.controls
-      = f.text_field :api_key, class:'text-input', placeholder:'API KEY', autocomplete:'on', class:'span4'
-    %div.controls
-      = f.text_field :secret_key, class:'text-input', placeholder:'SECRET KEY', autocomplete:'on', class:'span4'
-    %div.controls
-      = f.submit 'SignIn', class:'submit btn btn-primary span1'
+.span4.offset4
+  %div#signin-form
+    .alert= notice if notice
+    = form_for @credential, url:'signin' do |f|
+      %div.controls
+        = f.text_field :api_key, class:'text-input', placeholder:'API KEY', autocomplete:'on', class:'span4'
+      %div.controls
+        = f.text_field :secret_key, class:'text-input', placeholder:'SECRET KEY', autocomplete:'on', class:'span4'
+      %div.controls
+        = f.submit 'SignIn', class:'submit btn btn-primary span1'

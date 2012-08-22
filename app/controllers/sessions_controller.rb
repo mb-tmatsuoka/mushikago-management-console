@@ -1,12 +1,13 @@
 class SessionsController < ApplicationController
   def new
+    p params
     @credential = params[:credential] ? Credential.new(params[:credential]) : Credential.new
   end
 
   def create
-    session[:api_key] = request[:api_key]
-    session[:secret_key] = request[:secret_key]
-    redirect_to :root, :notice => 'login success!'
+    session[:api_key] = params[:credential][:api_key]
+    session[:secret_key] = params[:credential][:secret_key]
+    redirect_to :projects, :notice => 'login success!'
   end
 
   def destroy
