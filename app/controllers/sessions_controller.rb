@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    p params
+    redirect_to :projects if signed_in?
     @credential = params[:credential] ? Credential.new(params[:credential]) : Credential.new
   end
 
