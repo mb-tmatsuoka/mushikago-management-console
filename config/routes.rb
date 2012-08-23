@@ -1,4 +1,4 @@
-MitsubachiConsole::Application.routes.draw do
+MushikagoManagementConsole::Application.routes.draw do
   match '/signin' => 'sessions#create'
   match '/signout' => 'sessions#destroy'
 

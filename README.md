@@ -1,2 +1,2 @@
-mitsubachi-console
+mushikago-management-console
 ==================

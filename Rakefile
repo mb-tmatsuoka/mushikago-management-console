@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MitsubachiConsole::Application.load_tasks
+MushikagoManagementConsole::Application.load_tasks
