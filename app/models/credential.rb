@@ -11,7 +11,6 @@ class Credential
   validates_presence_of :secret_key
 
   def initialize p={}
-    puts p
     api_key = p[:api_key]
     secret_key = p[:secret_key]
   end
