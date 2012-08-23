@@ -5,6 +5,7 @@ MushikagoManagementConsole::Application.routes.draw do
   root :to => 'sessions#new'
 
   namespace :mitsubachi do
+    root :to => 'projects#index'
     resources :projects
   end
 
