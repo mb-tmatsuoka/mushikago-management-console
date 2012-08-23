@@ -4,7 +4,9 @@ MushikagoManagementConsole::Application.routes.draw do
 
   root :to => 'sessions#new'
 
-  resources :projects
+  namespace :mitsubachi do
+    resources :projects
+  end
 
 #  match ':controller(/:action(/:id))(.:format)'
 end

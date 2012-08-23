@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     session[:api_key] = params[:credential][:api_key]
     session[:secret_key] = params[:credential][:secret_key]
-    redirect_to :projects
+    redirect_to [:mitsubachi, :projects]
   end
 
   def destroy

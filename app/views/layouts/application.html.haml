@@ -20,12 +20,15 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %a.brand(href="#") MushikagoManagementConsole
+          %a.brand(href="#") Management Console
+          %ul.nav
+            %li
+              %a{href:'/mitsubachi'} mitsubachi
 
     .container
       .content
         .row
           .span1.offset11
             - if signed_in?
-              = link_to 'SignOut', controller:'sessions', action:'destroy'
+              = link_to 'SignOut', controller:'/sessions', action:'destroy'
           = yield
