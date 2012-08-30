@@ -1,0 +1,6 @@
+.span6
+  %h2= 'Scripts'
+  = render partial: 'files_table', locals:{files:@scripts['scripts']}
+.span6
+  %h2= 'Resources'
+  = render partial: 'files_table', locals:{files:@resources['files']}

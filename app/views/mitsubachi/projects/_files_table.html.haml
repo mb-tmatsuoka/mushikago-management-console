@@ -1,0 +1,10 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th= 'File Name'
+      %th= 'File Size'
+  %tbody
+    - files.each do |file|
+      %tr
+        %td= file['name']
+        %td= file['size']
