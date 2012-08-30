@@ -16,3 +16,9 @@ Installation
 上記コマンド入力後、ブラウザから [http://localhost:3000/](http://localhost:3000/) でアクセスできます。
 Ctrl+Cで停止することができます。
 
+Requirement
+------------
+
+* Ruby 1.9.2 以上
+* [Bundler](http://gembundler.com/)
+
