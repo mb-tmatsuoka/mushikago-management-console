@@ -1,10 +1,11 @@
 .span12
   %table.table.table-striped
     %thead
-      %th
-        Project Name
+      %tr
+        %th= 'Project Name'
     %tbody
       - @projects['projects'].each do |project|
         %tr
-          %td= project['name']
+          %td
+            = link_to project['name'], "/mitsubachi/projects/#{project['name']}"
 
