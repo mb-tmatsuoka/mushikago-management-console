@@ -1,6 +1,6 @@
 .span6
   %h2= 'Scripts'
-  = render partial: 'files_table', locals:{files:@scripts['scripts']}
+  = render partial: 'files_table', locals:{files:@scripts['scripts'], has_more_files:@scripts['has_more_files']==1}
 .span6
   %h2= 'Resources'
-  = render partial: 'files_table', locals:{files:@resources['files']}
+  = render partial: 'files_table', locals:{files:@resources['files'], has_more_files:@resources['has_more_files']==1}

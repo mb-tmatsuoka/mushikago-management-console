@@ -8,3 +8,8 @@
       %tr
         %td= file['name']
         %td= file['size']
+    - if has_more_files
+      %tr
+        %td{colspan:2}
+          %button.btn.btn-large.btn-block{type:'button'}
+            Load more files.
